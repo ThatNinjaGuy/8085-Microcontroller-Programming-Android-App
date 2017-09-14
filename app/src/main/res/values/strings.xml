@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">8085</string>
+
+    <string-array name="emulator_instructions">
+        <item>Enter the memory address of the location where you want to write your program.</item>
+        <item>When a end of program statement is encountered, then the system asks you if you want to write any more program segments.\nIf yes, then press \'Y\' else press \'N\'.</item>
+        <item>If you pressed \'Y\' then you will be taken to the first step. Else, to the next step.</item>
+        <item>The system will now ask if you want to enter any values in memory. If yes, then type the memory address of the location,else type \'N.</item>
+        <item>If more values have to be entered, then again enter the address and continue else press \'N.</item>
+        <item>Enter the memory address of the point from where you want to start execution.</item>
+        <item>Check the values of the flags or memory locations by entering the address or the flag name.</item>
+    </string-array>
+
+    <string-array name="other_instructions">
+        <item>On opening the page, you will find a list of items in front of you.</item>
+        <item>The detailed view or the complete description of the topic can be accessed by clicking on the particular item.</item>
+    </string-array>
+
+    <string-array name="sample_codes_title">
+        <item>8-BIT SUBTRACTION</item>
+        <item>ADDITION OF TWO 8-BIT NUMBERS; SUM : 16 BITS</item>
+        <item>ADDITION OF TWO 16-BIT NUMBERS; SUM 16-BIT OR MORE</item>
+        <item>FIND ONE\'S COMPLEMENT OF A 16-BIT NUMBER</item>
+        <item>TO FIND LARGER OF TWO NUMBERS</item>
+        <item>TO FIND SMALLEST NUMBER IN A DATA ARRAY</item>
+    </string-array>
+
+    <string-array name="sample_codes_code">
+        <item>LXI H,2501\nMOV A,M\nINX H\nSUB M\nINX H\nMOV M,A\nHLT</item>
+        <item>LXI H,2501\nMVI C,00\nMOV A,M\nINX H\nADD M\nJNC AHEAD\nINR C\nAHEAD STA 2503\nMOV A,C\nSTA 2504\nHLT</item>
+        <item>LHLD 2501\nXCHG\nLHLD 2503\nMVI C,00\nDAD D\nJNC AHEAD\nINR C\nAHEAD SHLD 2505\nMOV A,C\nSTA 2507\nHLT</item>
+        <item>LXI H,2501\nMOV A,M\nCMA\nSTA 2503\nINX H\nMOV A,M\nCMA\nSTA 2504\nHLT</item>
+        <item>LXI H,2501\nMOV A,M\nINX h\nCMP M\nJNC AHEAD\nMOV A,M\nAHEAD STA 2503\nHLT</item>
+        <item>LXI H,2500\nMOV C,M\nINX H\nMOV A,M\nDCR C\nLOOP INX H\nCMP M\nJC AHEAD\nMOV A,M\nAHEAD DCR C\nJNZ LOOP\nSTA 2450\nHLT</item>
+    </string-array>
+
+    <string-array name="tutorials_title">
+        <item>Introduction</item>
+        <item>Architecture And Organization-1</item>
+        <item>Architecture And Organization-2</item>
+        <item>Instruction Set - 1</item>
+        <item>Instruction Set - 2</item>
+        <item>Instruction Set - 3</item>
+        <item>Instruction Set - 4</item>
+        <item>Assembly Language Programming-1</item>
+        <item>Assembly Language Programming-2</item>
+    </string-array>
+
+    <string-array name="tutorials_url">
+        <item>https://www.youtube.com/watch?v=liRPtvj7bFU&amp;index=1&amp;list=PL0E131A78ABFBFDD0</item>
+        <item>https://www.youtube.com/watch?v=p4RcMLFIr5o&amp;index=2&amp;list=PL0E131A78ABFBFDD0</item>
+        <item>https://www.youtube.com/watch?v=MqH6KFnSY78&amp;index=3&amp;list=PL0E131A78ABFBFDD0</item>
+        <item>https://www.youtube.com/watch?v=tjZ2Mh_MV6g&amp;index=4&amp;list=PL0E131A78ABFBFDD0</item>
+        <item>https://www.youtube.com/watch?v=Xj5BqNHi1X8&amp;index=5&amp;list=PL0E131A78ABFBFDD0</item>
+        <item>https://www.youtube.com/watch?v=-l_vfd0d_rk&amp;index=6&amp;list=PL0E131A78ABFBFDD0</item>
+        <item>https://www.youtube.com/watch?v=U9tn9MrOcaE&amp;list=PL0E131A78ABFBFDD0&amp;index=7</item>
+        <item>https://www.youtube.com/watch?v=HXYhBCpDoVc&amp;index=8&amp;list=PL0E131A78ABFBFDD0</item>
+        <item>https://www.youtube.com/watch?v=mM35VuJgjeA&amp;index=9&amp;list=PL0E131A78ABFBFDD0</item>
+    </string-array>
+
+    <string name="program_address">Enter the address for program :</string>
+    <string name="further_program">For Further Code, Press Y Else Press N :</string>
+    <string name="memory_values">For values, enter address or press N :</string>
+    <string name="execution_address">Enter the address to execute :</string>
+    <string name="output_cells">Enter the address or register to check :</string>
+</resources>

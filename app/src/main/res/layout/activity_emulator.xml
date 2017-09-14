@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vishalgautam.a8085emulator.Emulator"
+    android:background="#000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="8085 Emulator"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dip"
+        android:textStyle="italic"
+        android:id="@+id/text"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/text"
+        android:layout_margin="5dip"
+        android:id="@+id/line"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="140dip"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/lcd"
+        android:id="@+id/lcdScreen"
+        android:clickable="true"
+        android:onClick="SetFocusOnLcd"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="45dip">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emulator speaks here"
+            android:textAllCaps="true"
+            android:typeface="monospace"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dip"
+            android:padding="5dip"
+            android:maxLines="2"
+            android:id="@+id/TextFromEmulator"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:padding="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_below="@+id/TextFromEmulator"
+            android:id="@+id/TextFromUser"
+            android:maxLines="2"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="100dip"
+        android:layout_height="55dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lcdScreen"
+        android:src="@android:drawable/ic_menu_send"
+        android:onClick="addToMemory"
+        android:background="@color/colorPrimary"
+        android:layout_margin="10dip"/>
+
+    <ImageButton
+        android:layout_width="100dip"
+        android:layout_height="55dip"
+        android:src="@android:drawable/ic_menu_revert"
+        android:layout_below="@+id/lcdScreen"
+        android:background="@color/colorPrimary"
+        android:layout_margin="10dip"
+        android:onClick="clearTheScreen"/>
+
+</RelativeLayout>

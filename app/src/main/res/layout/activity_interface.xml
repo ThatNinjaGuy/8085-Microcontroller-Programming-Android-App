@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vishalgautam.a8085emulator.Interface"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="8085 Microprocessor"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dip"
+        android:textStyle="italic"
+        android:id="@+id/text"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/text"
+        android:layout_margin="5dip"
+    />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="150dip"
+                android:layout_height="150dip"
+                android:layout_margin="20dip"
+                android:background="@drawable/tutorials"
+                android:onClick="GoToTutorials"
+                />
+            <ImageButton
+                android:layout_width="150dip"
+                android:layout_height="150dip"
+                android:layout_margin="20dip"
+                android:background="@drawable/emulator"
+                android:layout_alignParentRight="true"
+                android:onClick="GoToEmulator"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="150dip"
+                android:layout_height="150dip"
+                android:layout_margin="20dip"
+                android:background="@drawable/codes"
+                android:onClick="GoToSampleCodes"
+                />
+            <ImageButton
+                android:layout_width="150dip"
+                android:layout_height="150dip"
+                android:layout_margin="20dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/usage"
+                android:onClick="GoToInstructions"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:text="Created By : VISHAL GAUTAM "
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFF"
+        android:textStyle="italic"
+        android:typeface="monospace"/>
+
+</RelativeLayout>
